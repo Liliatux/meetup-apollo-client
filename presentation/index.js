@@ -21,9 +21,9 @@ import createTheme from "spectacle/lib/themes/default";
 require("normalize.css");
 
 const theme = createTheme({
-  primary: "white",
-  secondary: "#1F2022",
-  tertiary: "#03A9FC",
+  primary: "black",
+  secondary: "white",
+  tertiary: "#d347a7",
   quarternary: "#CECECE"
 }, {
   primary: "Montserrat",
@@ -36,10 +36,10 @@ export default class Presentation extends React.Component {
       <Deck transition={["zoom", "slide"]} transitionDuration={500} theme={theme}>
         <Slide transition={["zoom"]} bgColor="primary">
           <Heading size={1} fit caps lineHeight={1} textColor="secondary">
-            Spectacle Boilerplate
+            Introduction to Apollo Client
           </Heading>
           <Text margin="10px 0 0" textColor="tertiary" size={1} fit bold>
-            open the presentation/index.js file to get started
+            "best way to use GraphQL to build client application"
           </Text>
         </Slide>
         <Slide transition={["fade"]} bgColor="tertiary">
