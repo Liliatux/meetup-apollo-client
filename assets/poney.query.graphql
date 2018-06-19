@@ -1,0 +1,8 @@
+query ponies {
+  total
+  breed {
+    id
+    name
+    description
+  }
+}

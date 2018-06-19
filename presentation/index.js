@@ -2,7 +2,18 @@
 import React from "react";
 
 // Import Spectacle Core tags
-import { BlockQuote, Cite, Deck, Heading, Slide, Text } from "spectacle";
+import {
+  BlockQuote,
+  Cite,
+  Deck,
+  Heading,
+  Slide,
+  Text,
+  List,
+  ListItem,
+  Appear,
+  CodePane
+} from "spectacle";
 
 // Import theme
 import createTheme from "spectacle/lib/themes/default";
@@ -48,6 +59,26 @@ export default class Presentation extends React.Component {
           <Heading size={6} textColor="tertiary" caps>
             "What is this ?"
           </Heading>
+          <List ordered>
+            <Appear>
+              <ListItem>GraphQL: a query language for API</ListItem>
+            </Appear>
+            <Appear>
+              <ListItem>Apollo Client: a client GraphQL to fetch data</ListItem>
+            </Appear>
+            <Appear>
+              <ListItem>React: a client app</ListItem>
+            </Appear>
+          </List>
+        </Slide>
+        <Slide transition={["fade"]}>
+          <Heading size={6} textColor="secondary">
+            1. GraphQL
+          </Heading>
+          <CodePane
+            lang="graphql"
+            source={require("../assets/poney.query.graphql")}
+          />
         </Slide>
         <Slide transition={["fade"]}>
           <Heading size={6} textColor="tertiary" caps>
