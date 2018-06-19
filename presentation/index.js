@@ -12,7 +12,11 @@ import {
   List,
   ListItem,
   Appear,
-  CodePane
+  CodePane,
+  Layout,
+  Fill,
+  Code,
+  Image
 } from "spectacle";
 
 // Import theme
@@ -56,7 +60,7 @@ export default class Presentation extends React.Component {
           </BlockQuote>
         </Slide>
         <Slide transition={["fade"]}>
-          <Heading size={6} textColor="tertiary" caps>
+          <Heading size={4} textColor="tertiary" caps>
             "What is this ?"
           </Heading>
           <List ordered>
@@ -71,22 +75,78 @@ export default class Presentation extends React.Component {
             </Appear>
           </List>
         </Slide>
-        <Slide transition={["fade"]}>
-          <Heading size={6} textColor="secondary">
-            1. GraphQL
+        <Slide transition={["zoom", "fade"]}>
+          <Heading textColor="secondary">1. GraphQL</Heading>
+        </Slide>
+        <Slide>
+          <Heading size={5} textColor="secondary">
+            API REST
           </Heading>
-          <CodePane
-            lang="graphql"
-            source={require("../assets/poney.query.graphql")}
-          />
+          <Layout>
+            <Fill style={{ marginRight: "10px", marginTop: "50px" }}>
+              <Code textColor="secondary">GET /api/breeds</Code>
+            </Fill>
+            <Fill>
+              <CodePane
+                lang="json"
+                source={require("raw-loader!../assets/responseRestBreed.example")}
+                margin="20px auto"
+                theme="external"
+              />
+            </Fill>
+          </Layout>
+          <Layout>
+            <Fill style={{ marginRight: "10px", marginTop: "50px" }}>
+              <Code textColor="secondary">GET /api/ponies/?id=jer6566554</Code>
+            </Fill>
+            <Fill>
+              <CodePane
+                lang="json"
+                source={require("raw-loader!../assets/responseRestPonies.example")}
+                margin="20px auto"
+                theme="external"
+              />
+            </Fill>
+          </Layout>
+        </Slide>
+        <Slide>
+          <Heading size={5} textColor="secondary">
+            API GraphQL
+          </Heading>
+          <Layout>
+            <Fill style={{ marginRight: "10px" }}>
+              <CodePane
+                lang="graphql"
+                source={require("raw-loader!../assets/graphql.example")}
+                margin="20px auto"
+              />
+            </Fill>
+            <Fill>
+              <CodePane
+                lang="json"
+                source={require("raw-loader!../assets/responseGraphql.example")}
+                margin="20px auto"
+                theme="external"
+              />
+            </Fill>
+          </Layout>
+        </Slide>
+        <Slide transition={["zoom", "fade"]}>
+          <Heading textColor="secondary">2. Apollo Client</Heading>
+        </Slide>
+        <Slide>
+          <Image src={require("../assets/apolloShema.png")} />
+          <a href="https://dev-blog.apollodata.com/apollo-client-2-0-beyond-graphql-apis-888807b53afe">
+            Apollo beyond GraphQL APIs
+          </a>
         </Slide>
         <Slide transition={["fade"]}>
-          <Heading size={6} textColor="tertiary" caps>
-            "How it's work ?"
+          <Heading size={4} textColor="tertiary" caps>
+            "How does it work ?"
           </Heading>
         </Slide>
         <Slide transition={["fade"]}>
-          <Heading size={6} textColor="tertiary" caps>
+          <Heading size={4} textColor="tertiary" caps>
             "And with React ?"
           </Heading>
         </Slide>

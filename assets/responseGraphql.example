@@ -1,0 +1,20 @@
+{
+  "data": {
+    "totalBreeds": "2",
+    "breeds": [
+      {
+        "id": "joijjlz543346",
+        "name": "Frison",
+      },
+      {
+        "id": "ferg656565",
+        "name": "Welsh",
+      }
+    ],
+    "ponies": {
+      "name": "Morgana",
+      "breed": "Frison",
+      "age": 7ans,
+    }
+  }
+}

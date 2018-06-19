@@ -1,0 +1,14 @@
+query {
+  totalBreeds
+  breeds {
+    id
+    name
+  }
+  ponies(id: "jer6566554") {
+    name
+    breed {
+      name
+    }
+    age
+  }
+}
