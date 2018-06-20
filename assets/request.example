@@ -1,0 +1,46 @@
+import { Query } from "react-apollo";
+import gql from "graphql-tag";
+
+class Breeds extends React.Component {
+  render() {
+    return (
+      <Query
+        query={gql`
+            {
+            totalBreeds
+            breeds {
+              id
+              name
+            }
+            ponies(id: "jer6566554") {
+              name
+              breed {
+                name
+              }
+              age
+            }
+          }
+        `}
+      >
+        {({ loading, error, data }) => {
+          if (loading) return <p>Loading...</p>;
+          if (error) return <p>Error :(</p>;
+
+          return (
+            <div>
+              <ul>
+                {data.breeds.map(breed => (
+                  <li key={breed.id}>
+                    {breed.name}
+                  </li>
+                ))}
+              </ul>
+              <h5>{data.ponies.name}</h5>
+              <span>breed: {data.ponies.breed.name}</span>
+            </div>
+          )
+        }}
+      </Query>
+    )
+  }
+}
