@@ -116,6 +116,7 @@ export default class Presentation extends React.Component {
           <Layout>
             <Fill style={{ marginRight: "10px" }}>
               <CodePane
+                textSize={20}
                 lang="graphql"
                 source={require("raw-loader!../assets/graphql.example")}
                 margin="20px auto"
@@ -124,6 +125,7 @@ export default class Presentation extends React.Component {
             </Fill>
             <Fill>
               <CodePane
+                textSize={20}
                 lang="json"
                 source={require("raw-loader!../assets/responseGraphql.example")}
                 margin="20px auto"
@@ -141,25 +143,9 @@ export default class Presentation extends React.Component {
             Apollo beyond GraphQL APIs
           </a>
         </Slide>
-        <Slide transition={["zoom", "fade"]}>
-          <Heading textColor="secondary">2. React</Heading>
-        </Slide>
-        <Slide>
-          <List>
-            <ListItem>A JavaScript library for building client app</ListItem>
-            <Appear>
-              <ListItem>Use components to make complex user interface</ListItem>
-            </Appear>
-            <Appear>
-              <ListItem>
-                Use props and state in components for interactive UI
-              </ListItem>
-            </Appear>
-          </List>
-        </Slide>
         <Slide transition={["fade"]}>
           <Heading size={4} textColor="tertiary" caps>
-            "How does it work ?"
+            How does it work with React ?
           </Heading>
           <List ordered>
             <Appear>
@@ -180,6 +166,7 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide>
           <CodePane
+            textSize={20}
             lang="javascript"
             source={require("raw-loader!../assets/connectGraphql.example")}
             margin="20px auto"
@@ -191,6 +178,7 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide>
           <CodePane
+            textSize={20}
             lang="javascript"
             source={require("raw-loader!../assets/connectApollo.example")}
             margin="20px auto"

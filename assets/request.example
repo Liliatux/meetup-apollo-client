@@ -6,18 +6,10 @@ class Breeds extends React.Component {
     return (
       <Query
         query={gql`
-            {
-            totalBreeds
+          {
             breeds {
               id
               name
-            }
-            ponies(id: "jer6566554") {
-              name
-              breed {
-                name
-              }
-              age
             }
           }
         `}
@@ -35,8 +27,6 @@ class Breeds extends React.Component {
                   </li>
                 ))}
               </ul>
-              <h5>{data.ponies.name}</h5>
-              <span>breed: {data.ponies.breed.name}</span>
             </div>
           )
         }}
