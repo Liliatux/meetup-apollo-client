@@ -1,18 +1,20 @@
-import { Query } from "react-apollo";
+import { Mutation } from "react-apollo";
 import gql from "graphql-tag";
+
+const GET_BREEDS = gql`
+  {
+    breeds {
+      id
+      name
+    }
+  }
+`;
 
 class Breeds extends React.Component {
   render() {
     return (
       <Query
-        query={gql`
-          {
-            breeds {
-              id
-              name
-            }
-          }
-        `}
+        query={GET_BREEDS}
       >
         {({ loading, error, data }) => {
           if (loading) return <p>Loading...</p>;

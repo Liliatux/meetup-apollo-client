@@ -1,5 +1,6 @@
 // Import React
 import React from "react";
+import styles from '../assets/styles.css'
 
 // Import Spectacle Core tags
 import {
@@ -52,7 +53,7 @@ export default class Presentation extends React.Component {
             Introduction to Apollo Client
           </Heading>
           <Text margin="10px 0 0" textColor="tertiary" size={1} fit bold>
-            "best way to use GraphQL to build client application"
+            best way to use GraphQL to build client application
           </Text>
           <br />
           <BlockQuote>
@@ -61,17 +62,20 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide transition={["fade"]}>
           <Heading size={4} textColor="tertiary" caps>
-            "What is this ?"
+            What is this ?
           </Heading>
           <List ordered>
             <Appear>
               <ListItem>GraphQL: a query language for API</ListItem>
             </Appear>
             <Appear>
-              <ListItem>Apollo Client: a GraphQL client to fetch data</ListItem>
+              <ListItem>GraphQL Server: to expose data via the GraphQL schema</ListItem>
             </Appear>
             <Appear>
-              <ListItem>React: a client app</ListItem>
+              <ListItem>Apollo Client: a GraphQL client to manage data</ListItem>
+            </Appear>
+            <Appear>
+              <ListItem>React-Apollo: to fetch data to from your GraphQL API</ListItem>
             </Appear>
           </List>
         </Slide>
@@ -188,35 +192,45 @@ export default class Presentation extends React.Component {
         <Slide transition={["zoom", "fade"]}>
           <Heading textColor="secondary">3. Request data</Heading>
         </Slide>
+        <Slide margin={0}>
+          <Heading size={5} textColor="secondary">
+            Ajax
+          </Heading>
+          <CodePane
+            lang="jsx"
+            textSize={20}
+            source={require("raw-loader!../assets/ajax.example")}
+            margin="20px auto"
+            theme="external"
+          />
+        </Slide>
         <Slide>
-          <Layout>
-            <Fill style={{ marginRight: "10px" }}>
-              <Heading size={5} textColor="secondary">
-                Ajax
-              </Heading>
-              <CodePane
-                lang="jsx"
-                source={require("raw-loader!../assets/ajax.example")}
-                margin="20px auto"
-                theme="external"
-              />
-            </Fill>
-            <Fill>
-              <Heading size={5} textColor="secondary">
-                Apollo Client
-              </Heading>
-              <CodePane
-                lang="jsx"
-                source={require("raw-loader!../assets/request.example")}
-                margin="20px auto"
-                theme="light"
-              />
-            </Fill>
-          </Layout>
+          <Heading size={5} textColor="secondary">
+            React Apollo (Query)
+          </Heading>
+          <CodePane
+            lang="jsx"
+            textSize={20}
+            source={require("raw-loader!../assets/query.example")}
+            margin="20px auto"
+            theme="light"
+          />
+        </Slide>
+        <Slide>
+          <Heading size={5} textColor="secondary">
+            React Apollo (Mutation)
+          </Heading>
+          <CodePane
+            lang="jsx"
+            textSize={20}
+            source={require("raw-loader!../assets/mutation.example")}
+            margin="20px auto"
+            theme="light"
+          />
         </Slide>
         <Slide transition={["fade"]}>
           <Heading size={4} textColor="tertiary" caps>
-            "How I'm feeling ?"
+            How I’m feeling ?
           </Heading>
         </Slide>
       </Deck>
