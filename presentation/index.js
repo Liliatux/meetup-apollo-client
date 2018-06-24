@@ -66,16 +66,28 @@ export default class Presentation extends React.Component {
           </Heading>
           <List ordered>
             <Appear>
-              <ListItem>GraphQL: a query language for API</ListItem>
+              <ListItem style={{ marginBottom: "15px" }}>
+                <span style={{ color: "#d347a7" }}>GraphQL:</span> a query
+                language for API
+              </ListItem>
             </Appear>
             <Appear>
-              <ListItem>GraphQL Server: to expose data via the GraphQL schema</ListItem>
+              <ListItem style={{ marginBottom: "15px" }}>
+                <span style={{ color: "#d347a7" }}>GraphQL Server:</span> to
+                expose data via the GraphQL schema
+              </ListItem>
             </Appear>
             <Appear>
-              <ListItem>Apollo Client: a GraphQL client to manage data</ListItem>
+              <ListItem style={{ marginBottom: "15px" }}>
+                <span style={{ color: "#d347a7" }}>Apollo Client:</span> a
+                GraphQL client to manage data
+              </ListItem>
             </Appear>
             <Appear>
-              <ListItem>React-Apollo: React integration for Apollo Client</ListItem>
+              <ListItem style={{ marginBottom: "15px" }}>
+                <span style={{ color: "#d347a7" }}>React-Apollo:</span> React
+                integration for Apollo Client
+              </ListItem>
             </Appear>
           </List>
         </Slide>
@@ -142,6 +154,32 @@ export default class Presentation extends React.Component {
           <Heading textColor="secondary">2. Apollo Client</Heading>
         </Slide>
         <Slide>
+          <Text textColor="secondary" italic>
+            Apollo is a platform to building flexible tools for GraphQL in your
+            stack.
+          </Text>
+          <List>
+            <Appear>
+              <ListItem style={{ marginBottom: "15px" }}>
+                <span style={{ color: "#d347a7" }}>Apollo Server:</span>{" "}
+                translate REST APIs for building GraphQL APIs
+              </ListItem>
+            </Appear>
+            <Appear>
+              <ListItem style={{ marginBottom: "15px" }}>
+                <span style={{ color: "#d347a7" }}>Apollo Engine:</span>{" "}
+                provides essential features
+              </ListItem>
+            </Appear>
+            <Appear>
+              <ListItem style={{ marginBottom: "15px" }}>
+                <span style={{ color: "#d347a7" }}>Apollo Client:</span> bind
+                data to the UI with the GraphQL client
+              </ListItem>
+            </Appear>
+          </List>
+        </Slide>
+        <Slide>
           <Image src={require("../assets/apolloShema.png")} />
           <a href="https://dev-blog.apollodata.com/apollo-client-2-0-beyond-graphql-apis-888807b53afe">
             Apollo beyond GraphQL APIs
@@ -193,8 +231,10 @@ export default class Presentation extends React.Component {
           <Heading textColor="secondary">3. Request data</Heading>
         </Slide>
         <Slide margin={0}>
-          <Heading size={5} textColor="secondary">Ajax</Heading>
-          <Layout style={{ width: '40em' }}>
+          <Heading size={5} textColor="secondary">
+            Ajax
+          </Heading>
+          <Layout style={{ width: "40em" }}>
             <Fill>
               <CodePane
                 lang="jsx"
@@ -204,7 +244,7 @@ export default class Presentation extends React.Component {
                 theme="external"
               />
             </Fill>
-            <Fill style={{ marginLeft: '20px'}}>
+            <Fill style={{ marginLeft: "20px" }}>
               <CodePane
                 lang="jsx"
                 textSize={20}
@@ -216,8 +256,10 @@ export default class Presentation extends React.Component {
           </Layout>
         </Slide>
         <Slide margin={0}>
-          <Heading size={5} textColor="secondary">React Apollo (Query)</Heading>
-          <Layout style={{ width: '40em' }}>
+          <Heading size={5} textColor="secondary">
+            React Apollo (Query)
+          </Heading>
+          <Layout style={{ width: "40em" }}>
             <Fill>
               <CodePane
                 lang="jsx"
@@ -227,7 +269,7 @@ export default class Presentation extends React.Component {
                 theme="external"
               />
             </Fill>
-            <Fill style={{ marginLeft: '20px'}}>
+            <Fill style={{ marginLeft: "20px" }}>
               <CodePane
                 lang="jsx"
                 textSize={20}
@@ -239,8 +281,10 @@ export default class Presentation extends React.Component {
           </Layout>
         </Slide>
         <Slide margin={0}>
-          <Heading size={5} textColor="secondary">React Apollo (Mutation)</Heading>
-          <Layout style={{ width: '40em' }}>
+          <Heading size={5} textColor="secondary">
+            React Apollo (Mutation)
+          </Heading>
+          <Layout style={{ width: "40em" }}>
             <Fill>
               <CodePane
                 lang="jsx"
@@ -250,7 +294,7 @@ export default class Presentation extends React.Component {
                 theme="external"
               />
             </Fill>
-            <Fill style={{ marginLeft: '20px'}}>
+            <Fill style={{ marginLeft: "20px" }}>
               <CodePane
                 lang="jsx"
                 textSize={20}
@@ -265,6 +309,28 @@ export default class Presentation extends React.Component {
           <Heading size={4} textColor="tertiary" caps>
             How I’m feeling ?
           </Heading>
+          <List>
+            <Appear>
+              <ListItem style={{ marginBottom: "15px" }}>
+                I think my requests like I think my components
+              </ListItem>
+            </Appear>
+            <Appear>
+              <ListItem style={{ marginBottom: "15px" }}>
+                Caching increases performance is real
+              </ListItem>
+            </Appear>
+            <Appear>
+              <ListItem style={{ marginBottom: "15px" }}>
+                Force updating cache after mutation is not the best
+              </ListItem>
+            </Appear>
+            <Appear>
+              <ListItem style={{ marginBottom: "15px" }}>
+                Use Apollo Client DevTools to improve your developper experience
+              </ListItem>
+            </Appear>
+          </List>
         </Slide>
       </Deck>
     );

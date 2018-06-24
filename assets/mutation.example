@@ -9,15 +9,3 @@ const ADD_BREED = gql`
     }
   }
 `;
-
-const update = (cache, {data: { addBreed }}) => {
-  const { addBreed } = cache.readQuery({
-    query: GET_BREEDS
-  })
-  cache.writeQuery({
-    query: GET_BREEDS,
-    data: {
-      getBreed: getBreed.concat(addBreed)
-    }
-  })
-}

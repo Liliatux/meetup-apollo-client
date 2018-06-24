@@ -1,7 +1,7 @@
 import { Mutation } from "react-apollo";
 
 const SendBreed = () => (
-  <Mutation mutation={ADD_BREED} update={update}>
+  <Mutation mutation={ADD_BREED}>
     {(addBreed) => (
         <div>
           <form
