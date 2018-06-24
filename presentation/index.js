@@ -307,22 +307,22 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide transition={["fade"]}>
           <Heading size={4} textColor="tertiary" caps>
-            How I’m feeling ?
+            How do I feel?
           </Heading>
           <List>
             <Appear>
               <ListItem style={{ marginBottom: "15px" }}>
-                I think my requests like I think my components
+                I write my requests like I write my components
               </ListItem>
             </Appear>
             <Appear>
               <ListItem style={{ marginBottom: "15px" }}>
-                Caching increases performance is real
+                Caching really increases performance
               </ListItem>
             </Appear>
             <Appear>
               <ListItem style={{ marginBottom: "15px" }}>
-                Force updating cache after mutation is not the best
+                Manually updating cache after mutation is not the best
               </ListItem>
             </Appear>
             <Appear>
