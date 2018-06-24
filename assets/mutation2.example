@@ -1,0 +1,27 @@
+import { Mutation } from "react-apollo";
+
+const SendBreed = () => (
+  <Mutation mutation={ADD_BREED} update={update}>
+    {(addBreed) => (
+        <div>
+          <form
+             onSubmit={e => {
+               e.preventDefault();
+               addBreed({
+                variables: { name: input.value }
+              });
+              input.value = "";
+            }}
+           >
+             <input ref={node =>
+              { input = node }}
+            />
+             <button type="submit">
+              Add Breed
+            </button>
+           </form>
+        </div>
+      )
+    }
+  </Query>
+)

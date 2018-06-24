@@ -1,47 +1,26 @@
-class Breeds extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      error: null,
-      isLoaded: false,
-      items: []
-    };
-  }
-  componentDidMount() {
-    fetch("https://api/breeds")
-      .then(res => res.json())
-      .then(
-        (result) => {
-          this.setState({
-            isLoaded: true,
-            items: result.items
-          });
-        },
-        (error) => {
-          this.setState({
-            isLoaded: true,
-            error
-          });
-        }
-      )
-  }
-
-  render() {
-    const { error, isLoaded, items } = this.state;
-    if (error) {
-      return <div>Error: {error.message}</div>;
-    } else if (!isLoaded) {
-      return <div>Loading...</div>;
-    } else {
-      return (
-      <ul>
-        {items.breeds.map(breed => (
-          <li key={breed.id}>
-            {breed.name}
-          </li>
-        ))}
-      </ul>
-      );
-    }
-  }
+constructor(props) {
+  super(props);
+  this.state = {
+    error: null,
+    isLoaded: false,
+    items: []
+  };
+}
+componentDidMount() {
+  fetch("https://api/breeds")
+    .then(res => res.json())
+    .then(
+      (result) => {
+        this.setState({
+          isLoaded: true,
+          items: result.items
+        });
+      },
+      (error) => {
+        this.setState({
+          isLoaded: true,
+          error
+        });
+      }
+    )
 }

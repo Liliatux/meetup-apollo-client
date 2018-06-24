@@ -1,9 +1,8 @@
-import { Mutation } from "react-apollo";
 import gql from "graphql-tag";
 import { GET_BREEDS } from './query'
 
 const ADD_BREED = gql`
-  mutation addBreed($id: String!){
+  mutation addBreed($name: String!){
     addBreed(string: $string) {
       id
       name
@@ -12,33 +11,13 @@ const ADD_BREED = gql`
 `;
 
 const update = (cache, {data: { addBreed }}) => {
-  const { addBreed } = cache.readQuery({ query: GET_BREEDS })
+  const { addBreed } = cache.readQuery({
+    query: GET_BREEDS
+  })
   cache.writeQuery({
     query: GET_BREEDS,
-    data: { getBreed: getBreed.concat(addBreed) }
+    data: {
+      getBreed: getBreed.concat(addBreed)
+    }
   })
-}
-
-class Breeds extends React.Component {
-  render() {
-    return (
-      <Mutation mutation={ADD_BREED} update={update}>
-        {(addBreed) => (
-            <div>
-              <form
-                 onSubmit={e => {
-                   e.preventDefault();
-                   addBreed({ variables: { name: input.value } });
-                   input.value = "";
-                 }}
-               >
-                 <input ref={node => { input = node }} />
-                 <button type="submit">Add Breed</button>
-               </form>
-            </div>
-          )
-        }
-      </Query>
-    )
-  }
 }
