@@ -1,9 +1,8 @@
 import gql from "graphql-tag";
-import { GET_BREEDS } from './query'
 
 const ADD_BREED = gql`
   mutation addBreed($name: String!){
-    addBreed(string: $string) {
+    addBreed(name: $name) {
       id
       name
     }

@@ -13,7 +13,9 @@
     ],
     "ponies": {
       "name": "Morgana",
-      "breed": "Frison",
+      "breed": {
+        "name": Frison"
+      },
       "age": 7ans,
     }
   }

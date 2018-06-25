@@ -155,20 +155,19 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide>
           <Text textColor="secondary" italic>
-            Apollo is a platform to building flexible tools for GraphQL in your
-            stack.
+            Apollo is a set of flexible tools to build, understand and consume GraphQL APIs.
           </Text>
           <List>
             <Appear>
               <ListItem style={{ marginBottom: "15px" }}>
                 <span style={{ color: "#d347a7" }}>Apollo Server:</span>{" "}
-                translate REST APIs for building GraphQL APIs
+                building GraphQL APIs
               </ListItem>
             </Appear>
             <Appear>
               <ListItem style={{ marginBottom: "15px" }}>
                 <span style={{ color: "#d347a7" }}>Apollo Engine:</span>{" "}
-                provides essential features
+                measure and understand your GraphQL API
               </ListItem>
             </Appear>
             <Appear>
@@ -181,9 +180,7 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide>
           <Image src={require("../assets/apolloShema.png")} />
-          <a href="https://dev-blog.apollodata.com/apollo-client-2-0-beyond-graphql-apis-888807b53afe">
-            Apollo beyond GraphQL APIs
-          </a>
+          <Text textColor='secondary' italic>From Apollo blog</Text>
         </Slide>
         <Slide transition={["fade"]}>
           <Heading size={4} textColor="tertiary" caps>
@@ -232,7 +229,7 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide margin={0}>
           <Heading size={5} textColor="secondary">
-            Ajax
+            REST APIs
           </Heading>
           <Layout style={{ width: "40em" }}>
             <Fill>
@@ -331,6 +328,12 @@ export default class Presentation extends React.Component {
               </ListItem>
             </Appear>
           </List>
+        </Slide>
+        <Slide transition={["fade"]}>
+          <Heading size={4} textColor="tertiary" caps>
+            Thank You very much ^-^
+          </Heading>
+          <Heading size={6} textColor='secondary'>For listening to my first talk</Heading>
         </Slide>
       </Deck>
     );
