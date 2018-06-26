@@ -16,8 +16,7 @@ import {
   Layout,
   Fill,
   Code,
-  Image,
-  Fit
+  Image
 } from "spectacle";
 
 // Import theme
@@ -155,7 +154,8 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide>
           <Text textColor="secondary" italic>
-            Apollo is a set of flexible tools to build, understand and consume GraphQL APIs.
+            Apollo is a set of flexible tools to build, understand and consume
+            GraphQL APIs.
           </Text>
           <List>
             <Appear>
@@ -166,8 +166,8 @@ export default class Presentation extends React.Component {
             </Appear>
             <Appear>
               <ListItem style={{ marginBottom: "15px" }}>
-                <span style={{ color: "#d347a7" }}>Apollo Engine:</span>{" "}
-                measure and understand your GraphQL API
+                <span style={{ color: "#d347a7" }}>Apollo Engine:</span> measure
+                and understand your GraphQL API
               </ListItem>
             </Appear>
             <Appear>
@@ -180,7 +180,9 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide>
           <Image src={require("../assets/apolloShema.png")} />
-          <Text textColor='secondary' italic>From Apollo blog</Text>
+          <Text textColor="secondary" italic>
+            From Apollo blog
+          </Text>
         </Slide>
         <Slide transition={["fade"]}>
           <Heading size={4} textColor="tertiary" caps>
@@ -333,7 +335,9 @@ export default class Presentation extends React.Component {
           <Heading size={4} textColor="tertiary" caps>
             Thank You very much ^-^
           </Heading>
-          <Heading size={6} textColor='secondary'>For listening to my first talk</Heading>
+          <Heading size={6} textColor="secondary">
+            for listening to my first talk...
+          </Heading>
         </Slide>
       </Deck>
     );
